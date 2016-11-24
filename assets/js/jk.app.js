@@ -177,14 +177,16 @@ var Tube = (function ($) {
                                     $(".stats-totals.incidents").html("<span>" + jk.vars.totalFiltered + "</span>Incidents");
                                     $(".stats-totals.processed").html("<span>" + Math.floor((jk.vars.totalProcessed / jk.vars.totalMessages) * 100)  + "%</span>Sifted");
                                     $(".stats-totals.total").html("<span>" + jk.vars.totalMessages  + "</span>Samples");
+                                    
+                                    if (jk.vars.totalProcessed === jk.vars.totalMessages-1) {
+                                        $(".hide").removeClass("hide");
+                                    }
                                 }
                             );
                         
                         });
                         
-                        if (jk.vars.totalProcessed === jk.vars.totalMessages-1) {
-                            $(".hide").removeClass("hide");
-                        }
+                        
                         
                         _obj = {
                             items : {
