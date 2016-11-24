@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<title>youtube</title>
+    <meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="simple javascript jquery catpcha alternative - easy to install">
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="google-site-verification" content="X9rmTzF2XSadDqdErsjUDCaBF0lE7yFQLWcPNz8hHCs" />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="msapplication-tap-highlight" content="no" />
+	
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body class="layout-rankings">
+
+<section>
+    <div class="post-auth">
+        <div class="video-list">
+            <div class="channel info">
+                <div>
+                    <h1 class="stats-totals"><span>Top 25</span>
+                        Live Streams
+                    </h1>    
+                    <small>Category &mdash; Gaming</small>               
+                </div>
+                
+            </div>
+            <div class="channel info">
+                <div>
+                    <h1 class="stats-totals total"></h1>
+                    <small>Live Chat Messages</small>
+                </div>
+                <div class="stats-bar"></div>
+            </div>
+            <div class="channel info">
+                <div>
+                    <h1 class="stats-totals processed"></h1>
+                    <small>Text Classification</small>
+                </div>
+                <div class="stats-bar"></div>
+            </div>
+            <div class="channel info">
+                <div>
+                   
+                    <h1 class="stats-totals incidents"></h1>
+                    <small>Toxic Messages</small>
+                </div>
+                <div class="stats-bar"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>    
+    <div>
+        <div class="thread"></div>
+    </div>
+</section>
+
+<div class="layout-dashboard">
+    <div>youtube</div>
+    <div></div>
+    <div><a href="#" class="download post-auth">data file</a><a href="#" id="login-link" class="pre-auth">login</a></div>
+</div>
+
+<!-- templates -->
+<script id="list" type="text/template">
+    {{#items}}
+    	<a href="#" class="btn-vid channel"  id="{{ id.videoId }}">
+            <img src="{{ snippet.thumbnails.high.url }}" />
+            <p><small>{{ snippet.channelTitle }}</small><br> 
+            {{ snippet.title }}</p>
+            <div class="stats-meta"></div>
+            <div class="stats"></div>
+        </a>
+    {{/items}}
+</script>
+
+<script id="stats" type="text/template">
+    <table class="stats-table">
+        {{#items}}
+            </tr>
+                <td>Incidents:</td>
+                <td class="stats-filtered">{{ filtered }}</td>
+        	</tr>
+        	<tr>
+            	<td>Messages: </td>
+            	<td class="stats-messages">{{ messages }}</td>
+        	</tr>
+        	<tr>
+            	<td>Viewers: </td>
+                <td>{{ viewers }}</td>
+        	</tr>
+                <td>Likes:</td>
+                <td>{{ likes }}</td>
+        	</tr>
+        {{/items}}
+    </table>
+    <span class="stats-bar-a"></span>
+    <span class="stats-bar-b"></span>
+</script>
+
+<script id="videoHeader" type="text/template">
+    <a href="#" class="close">X</a>
+    {{#items}}
+        <h4>Channel: {{ snippet.channelTitle }}</h4>
+        <h3>{{ snippet.title }}</h3>
+        <div class="flex-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ id }}" frameborder="0" allowfullscreen></iframe></div>
+        <p><a href='https://www.youtube.com/watch?v={{ id }}' target='_blank'>YouTube</a> | Viewers: {{ liveStreamingDetails.concurrentViewers }}</p>
+                    
+    {{/items}}
+</script>
+<script id="comment" type="text/template">
+   
+    <div class="chat">
+        <p>{{ message }}</p>
+        <small>{{ author }}</small>
+    </div>
+   
+</script>
+<script id="sifted" type="text/template">
+    {{#tags}}
+        <span class="tag {{ risk }}">{{ tag }}:{{ risk }}</span>
+    {{/tags}}
+    <mark>{{ hashes }}</mark>
+    <small>{{ text }}</small>
+</div>
+   
+</script>
+
+<!-- javascript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js"><\/script>')</script>
+<script src="assets/js/mustache.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/sn.js"></script>
+<script src="assets/js/jk.app.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</body>
+</html>
+
+
