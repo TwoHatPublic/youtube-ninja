@@ -146,9 +146,7 @@ var Tube = (function ($) {
                             var _curr = this;
                             jk.vars.txtFile += _curr.snippet.displayMessage + "\n";
                             jk.vars.totalMessages += 1;
-                            
-                            
-                            
+                                                        
                             SiftNinja.services.classify(_curr.snippet.displayMessage, 
                                 function(data_c){
                                     var _this = $("#" + id);
@@ -184,7 +182,9 @@ var Tube = (function ($) {
                         
                         });
                         
-                        //jk.vars.totalMessages += Number(data_b.items.length);
+                        if (jk.vars.totalProcessed === jk.vars.totalMessages-1) {
+                            $(".hide").removeClass("hide");
+                        }
                         
                         _obj = {
                             items : {
