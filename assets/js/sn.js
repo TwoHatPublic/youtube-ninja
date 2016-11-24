@@ -7,7 +7,7 @@ var SiftNinja = (function ($) {
             var payload = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://code.emptycan.com/api.ninja.php",
+                "url": "https://twohat.com/api/sift-ninja/marketing/",
                 "method": "POST",
                 "processData": false,
                 "data": "{\n    \"text\": \"" + txt + "\",\n    \"user_id\": \"abc123\",\n    \"user_display_name\": \"filterBuster\",\n    \"language\": \"ee\",\n    \"context\": \"thread_271788\",\n    \"content_id\": 10000\n}"

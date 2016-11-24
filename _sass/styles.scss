@@ -348,7 +348,7 @@ img {
         }
     }
     &.info {
-        background: #333;
+        background: #222;
         color: #fff;
         text-align: center;
         display: table;
@@ -360,6 +360,17 @@ img {
                 padding: 0 $spacer/2;
                 margin: 0 0 12px 0;
                 text-align: center;
+            }
+            a {
+                background: rgba(#EE0000, 0.5);
+                color: #fff;
+                position: absolute;
+                bottom: $spacer/2;
+                left: $spacer/2;
+                right: $spacer/2;
+                text-align: center;
+                padding: $spacer/2;
+                text-decoration: none;
             }
         }
     }
@@ -373,6 +384,10 @@ img {
 }
 
 // utilities
+.hide {
+    display: none;
+}
+
 .flex-video {
 	position: relative;
 	//padding-top: 25px;
